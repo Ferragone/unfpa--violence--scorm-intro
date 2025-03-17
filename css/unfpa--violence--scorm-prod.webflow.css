@@ -484,6 +484,10 @@ label {
   overflow: visible;
 }
 
+.text-and-image-pin-wrapper.align-top.verticalon-small.scroller {
+  overflow: hidden;
+}
+
 .text-image-text {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
@@ -512,9 +516,11 @@ label {
 }
 
 .text-image-image._4-in-row {
+  scrollbar-width: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: stretch;
   max-height: 100%;
+  overflow: auto;
 }
 
 .text-image-image.hide {
@@ -671,6 +677,7 @@ label {
 .text-and-icon-wrapper {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
+  scrollbar-width: none;
   flex-flow: column;
   flex: 0 auto;
   justify-content: flex-start;
@@ -751,10 +758,15 @@ label {
   font-size: 22px;
   font-weight: 700;
   line-height: 26px;
+  display: block;
 }
 
 .next-button-course:hover {
   background-color: var(--purple);
+}
+
+.next-button-course.none {
+  display: none;
 }
 
 .image-inside-grid, .image-inside-grid._333 {
@@ -5847,7 +5859,9 @@ label {
   }
 
   .text-and-image-pin-wrapper.align-top.verticalon-small {
+    scrollbar-width: none;
     flex-flow: column;
+    overflow: auto;
   }
 
   .text-image-text {
@@ -6859,7 +6873,16 @@ label {
     overflow: auto;
   }
 
-  .section-grid, .section-map {
+  .section-grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .text-image-image._4-in-row {
+    overflow: auto;
+  }
+
+  .section-map {
     padding-left: 16px;
     padding-right: 16px;
   }
